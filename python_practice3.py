@@ -555,5 +555,20 @@ class  dog(animal):
         # super().sound()
         print("Dog is Barking")
 
+class vehicle:
+    def __init__(self, vehicle_eng_det):
+        self.vehicle_eng_det=vehicle_eng_det
+
+class car(vehicle):
+    def __init__(self,vehicle_eng_det,name):
+        super().__init__(vehicle_eng_det)
+        self.name=name
+    def prnt(self):
+        return self.vehicle_eng_det,self.name
+
+
 fp=dog()
 print(fp.sound())
+
+veh=car('2026_2600cc',"Mercedes")
+print(veh.prnt())
